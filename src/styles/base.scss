@@ -1,0 +1,26 @@
+@import "partials/variables";
+@import "partials/classes";
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+a {
+  color: $color-blue;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: $color-blue;
+  text-decoration: none;
+}
+
+#__next {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}

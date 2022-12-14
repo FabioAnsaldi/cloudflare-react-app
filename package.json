@@ -1,0 +1,43 @@
+{
+  "name": "cloudflare-react-app",
+  "version": "1.0.0",
+  "description": "Cloudflare React Application",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabioAnsaldi/cloudflare-react-app.git"
+  },
+  "keywords": [
+    "React",
+    "NextJS",
+    "Cloudflare"
+  ],
+  "author": "Fabio Ansaldi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FabioAnsaldi/cloudflare-react-app/issues"
+  },
+  "homepage": "https://github.com/FabioAnsaldi/cloudflare-react-app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/eslint-parser": "^7.19.1",
+    "babel-plugin-wildcard": "^7.0.0",
+    "eslint": "^8.29.0",
+    "eslint-plugin-react": "^7.31.11",
+    "next": "^13.0.6",
+    "prop-types": "^15.8.1",
+    "sass": "^1.56.2"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

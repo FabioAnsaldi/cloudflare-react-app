@@ -1,0 +1,167 @@
+// General classes structure
+//
+
+////////////////////////////////////////////////////////////////////////////
+// Colors
+
+$colorClass: ".color";
+$colorKey: "black", "blue-0", "blue-1", "blue-2", "blue-3", "white";
+
+#{$colorClass} {
+
+	@each $key in $colorKey {
+		&--#{$key} {
+			color: unquote( map-get($color, $key) + ' !important' );
+		}
+    }
+}
+
+$bgColorClass: ".backgroundColor";
+
+#{$bgColorClass} {
+
+	@each $key in $colorKey {
+		&--#{$key} {
+			background-color: unquote( map-get($color, $key) + ' !important' );
+		}
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////
+// height
+
+$height: ".height";
+$heightKey: "auto", "inherit", "initial", "full";
+
+#{$height} {
+
+	@each $key in $heightKey {
+		&--#{$key} {
+			height: map-get($heights, $key);
+		}
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////
+// width
+
+$width: ".width";
+$widthKey: "auto", "inherit", "initial", "half", "full";
+
+#{$width} {
+
+	@each $key in $widthKey {
+		&--#{$key} {
+			width: map-get($widths, $key);
+		}
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////
+// flexGrows
+
+$flexGrow: ".flexGrow";
+$flexGrowKey: 0, 1, 2, 3, 4;
+
+#{$flexGrow} {
+
+	@each $key in $flexGrowKey {
+		&--#{$key} {
+			flex-grow: $key;
+		}
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////
+// display
+
+$display: ".display";
+$displayKey: "block", "inline", "inline-block", "flex", "none";
+
+#{$display} {
+
+	@each $key in $displayKey {
+		&--#{$key} {
+			display: unquote( map-get($displays, $key) + ' !important' );
+		}
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////
+// Paddings
+
+$padding: ".padding";
+$paddingKey: 'auto', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F';
+
+#{$padding} {
+
+	@each $key in $paddingKey {
+		&--#{$key} {
+			padding: unquote( map-get($gutter, $key) + ' !important' );
+		}
+    }
+
+	@each $key in $paddingKey {
+		&Bottom--#{$key} {
+			padding-bottom: unquote( map-get($gutter, $key) + ' !important' );
+		}
+    }
+
+	@each $key in $paddingKey {
+		&Top--#{$key} {
+			padding-top: unquote( map-get($gutter, $key) + ' !important' );
+		}
+    }
+
+	@each $key in $paddingKey {
+		&Left--#{$key} {
+			padding-left: unquote( map-get($gutter, $key) + ' !important' );
+		}
+    }
+
+	@each $key in $paddingKey {
+		&Right--#{$key} {
+			padding-right: unquote( map-get($gutter, $key) + ' !important' );
+		}
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////
+// Margins
+
+$margin: ".margin";
+$marginKey: 'auto', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F';
+
+#{$margin} {
+
+	@each $key in $marginKey {
+		&--#{$key} {
+			margin: unquote( map-get($gutter, $key) + ' !important' );
+		}
+    }
+
+	@each $key in $marginKey {
+		&Bottom--#{$key} {
+			margin-bottom: unquote( map-get($gutter, $key) + ' !important' );
+		}
+    }
+
+	@each $key in $marginKey {
+		&Top--#{$key} {
+			margin-top: unquote( map-get($gutter, $key) + ' !important' );
+		}
+    }
+
+	@each $key in $marginKey {
+		&Left--#{$key} {
+			margin-left: unquote( map-get($gutter, $key) + ' !important' );
+		}
+    }
+
+	@each $key in $marginKey {
+		&Right--#{$key} {
+			margin-right: unquote( map-get($gutter, $key) + ' !important' );
+		}
+    }
+}

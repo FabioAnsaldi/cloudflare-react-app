@@ -1,0 +1,15 @@
+{
+    "short_name": "Cloudflare React Application",
+    "name": "The new Cloudflare React Application project with React library and useful others new frameworks",
+    "icons": [
+      {
+        "src": "favicon.png",
+        "sizes": "32x32",
+        "type": "image/x-icon"
+      }
+    ],
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }
+  

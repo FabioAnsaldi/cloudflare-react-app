@@ -1,0 +1,94 @@
+// General variable structure
+//
+// Variable format should follow the `$component-modifier-state-property` order.
+
+////////////////////////////////////////////////////////////////////////////
+// Colors
+
+//-- Colors:start --//
+
+$color-black: #000000;
+$color-blue: blue;
+$color-white: #FFFFFF;
+
+$color: (
+  'black': $color-black,
+  'blue': $color-blue,
+  'white': $color-white
+) !default;
+
+//-- Colors:end --//
+
+////////////////////////////////////////////////////////////////////////////
+// Gutter
+
+//-- Gutter:start --//
+
+$gutter: (
+  'auto': auto,
+  '0': 0,
+  '1': 8px,
+  '2': 16px,
+  '3': 24px,
+  '4': 32px,
+  '5': 40px,
+  '6': 48px,
+  '7': 56px,
+  '8': 64px,
+  '9': 64px,
+  'A': 72px,
+  'B': 80px,
+  'C': 88px,
+  'D': 96px,
+  'E': 104px,
+  'F': 112px,
+) !default;
+
+//-- Gutter:end --//
+
+////////////////////////////////////////////////////////////////////////////
+// Heights
+
+//-- Heights:start --//
+
+$heights: (
+  'auto': auto,
+  'inherit': 'inherit',
+  'initial': 'initial',
+  'full': #{"100%; height: -moz-available; height: stretch;"},
+) !default;
+
+//-- Heights:end --//
+
+
+////////////////////////////////////////////////////////////////////////////
+// Widths
+
+//-- Widths:start --//
+
+$widths: (
+  'auto': auto,
+  'inherit': 'inherit',
+  'initial': 'initial',
+  'half': 50%,
+  'full': #{"100%; width: -moz-available; width: stretch;"},
+) !default;
+
+//-- Widths:end --//
+
+////////////////////////////////////////////////////////////////////////////
+// Displays
+
+//-- Displays:start --//
+
+$displays: (
+  'block': block,
+  'inherit': inherit,
+  'initial': initial,
+  'inline': inline,
+  'inline-block': inline-block,
+  'flex': flex,
+  'none': none,
+) !default;
+
+//-- Displays:end --//
