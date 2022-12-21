@@ -3,13 +3,13 @@ import EnvironmentContext from "contexts/environmentContext";
 
 // eslint-disable-next-line no-unused-vars
 const Index = props => {
-    const { env } = useContext(EnvironmentContext);
+    const { environment } = useContext(EnvironmentContext);
 
     return (
         <>
-            <h1>ciao</h1>
+            <h1>Welcome to Cloudflare React Application</h1>
             <p>
-                <small>PLATFORM</small>: <strong>{env.PLATFORM}</strong>
+                <small>PLATFORM</small>: <strong>{environment.PLATFORM}</strong>
             </p>
         </>
     );

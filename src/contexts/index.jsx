@@ -7,7 +7,7 @@ export const Contexts = props => {
     const { children, env } = props;
 
     return (
-        <EnvironmentProvider generalContext={{ env }}>
+        <EnvironmentProvider generalContext={{ environment: env }}>
             <ApplicationComponent>
                 {children}
             </ApplicationComponent>

@@ -2,7 +2,7 @@ import React from "react";
 import App from "next/app";
 import Head from "next/head";
 import Contexts from "contexts";
-import "../styles/base.scss";
+import "bootstrap/dist/css/bootstrap.css";
 import "../styles/base.scss";
 
 class Application extends App {
@@ -27,6 +27,10 @@ class Application extends App {
         );
     }
 
+    componentDidMount () {
+        import("bootstrap/dist/js/bootstrap");
+    }
+
     render () {
         const { Component, pageProps } = this.props;
 
@@ -45,7 +49,7 @@ class Application extends App {
 App.getInitialProps = async ctx => {
     const VERSION = "1.0";
     // eslint-disable-next-line no-unused-vars, no-undef
-    const PLATFORM = process.env.PLATFORM || "LOCALE";
+    const PLATFORM = process.env.PLATFORM || "LOCAL";
 
     return { env: { VERSION, PLATFORM } };
 };

@@ -23,7 +23,7 @@ module.exports = {
         "no-unused-vars": [
             "error",
             {
-                "varsIgnorePattern": "React",
+                "varsIgnorePattern": "^(React|bootstrap)$",
             }
         ],
         "indent": [
