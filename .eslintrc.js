@@ -5,7 +5,8 @@ module.exports = {
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime"
     ],
     "overrides": [
         {
@@ -41,6 +42,34 @@ module.exports = {
         "semi": [
             "error",
             "always"
+        ]
+    },
+    "settings": {
+        "react": {
+            "createClass": "createReactClass",
+            "pragma": "React",
+            "fragment": "Fragment",
+            "version": "detect",
+            "flowVersion": "0.53"
+        },
+        "propWrapperFunctions": [
+            "forbidExtraProps",
+            {"property": "freeze", "object": "Object"},
+            {"property": "myFavoriteWrapper"},
+            {"property": "forbidExtraProps", "exact": true}
+        ],
+        "componentWrapperFunctions": [
+            "observer",
+            {"property": "styled"},
+            {"property": "observer", "object": "Mobx"},
+        ],
+        "formComponents": [
+            "CustomForm",
+            {"name": "Form", "formAttribute": "endpoint"}
+        ],
+        "linkComponents": [
+            "Hyperlink",
+            {"name": "Link", "linkAttribute": "to"}
         ]
     }
 };
