@@ -1,11 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import LayoutComponent from "components/layout";
 
 const ApplicationComponent = props => {
     const { children } = props;
 
     return (
-        <>{children}</>
+        <LayoutComponent>
+            {children}
+        </LayoutComponent>
     );
 };
 

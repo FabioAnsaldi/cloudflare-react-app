@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next build && next export",
-    "start": "next start",
+    "start": "next build && next start",
     "lint": "next lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,6 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/eslint-parser": "^7.19.1",
+    "@next/eslint-plugin-next": "^13.1.2",
     "babel-plugin-wildcard": "^7.0.0",
     "eslint": "^8.29.0",
     "eslint-plugin-react": "^7.31.11",
@@ -38,8 +39,12 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
+    "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3",
+    "glightbox": "^3.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "swiper": "^8.4.6"
   }
 }

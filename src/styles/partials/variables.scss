@@ -8,13 +8,41 @@
 //-- Colors:start --//
 
 $color-black: #000000;
-$color-blue: blue;
+$color-light-black: #333333;
+$color-opaque-black: rgba(0, 0, 0, 0.6);
+$color-light-opaque-black: rgba(0, 0, 0, 0.2);
+$color-opaque-light-black: rgba(33, 33, 33, 0.6);
+$color-light-opaque-light-black: rgba(33, 33, 33, 0.2);
+$color-grey: #999999;
+$color-light-grey: #cccccc;
 $color-white: #FFFFFF;
+$color-opaque-white: rgba(255, 255, 255, 0.6);
+$color-light-opaque-white: rgba(255, 255, 255, 0.2);
+$color-green: #15df29;
+$color-light-green: #5bd9a9;
+$color-opaque-green: rgba(21, 223, 41, 0.6);
+$color-light-opaque-green: rgba(21, 223, 41, 0.2);
+$color-red: #df1529;
+$color-light-red: #d95ba9;
+$color-opaque-red: rgba(223, 21, 41, 0.6);
+$color-light-opaque-red: rgba(223, 21, 41, 0.2);
+$color-yellow: #dfdf29;
+$color-light-yellow: #d9d9a9;
+$color-opaque-yellow: rgba(223, 223, 41, 0.6);
+$color-light-opaque-yellow: rgba(223, 223, 41, 0.2);
+$color-blue: #2915df;
+$color-light-blue: #5ba9d9;
+$color-opaque-blue: rgba(41, 21, 223, 0.6);
+$color-light-opaque-blue: rgba(41, 21, 223, 0.2);
 
 $color: (
+  'light-black': $color-light-black,
   'black': $color-black,
   'blue': $color-blue,
-  'white': $color-white
+  'white': $color-white,
+  'green': $color-green,
+  'light-green': $color-light-green,
+  'red': $color-red,
 ) !default;
 
 //-- Colors:end --//

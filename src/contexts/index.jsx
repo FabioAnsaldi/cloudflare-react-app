@@ -1,16 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { EnvironmentProvider } from "contexts/environmentContext";
-import ApplicationComponent from "components";
 
 export const Contexts = props => {
     const { children, env } = props;
 
     return (
         <EnvironmentProvider generalContext={{ environment: env }}>
-            <ApplicationComponent>
-                {children}
-            </ApplicationComponent>
+            {children}
         </EnvironmentProvider>
     );
 };
