@@ -41,25 +41,26 @@ class Application extends App {
     aosInit () {
         AOS.init({
             duration: 1000,
-            easing: 'ease-in-out',
+            easing: "ease-in-out",
             once: true,
             mirror: false
-          });
+        });
     }
 
     glightboxInit (factory) {
         window.GLightbox = factory({
-            selector: '.glightbox'
+            selector: ".glightbox"
         });
     }
 
     swiperInit () {
-        new Swiper('.slides-one', {});
+        new Swiper(".slides-one", {});
     }
 
     componentDidMount () {
         import("bootstrap/dist/js/bootstrap");
-        const factory = require('glightbox/dist/js/glightbox')
+        // eslint-disable-next-line no-undef
+        const factory = require("glightbox/dist/js/glightbox");
 
         this.aosInit();
         this.glightboxInit(factory);
