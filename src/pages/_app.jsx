@@ -1,7 +1,7 @@
 import React from "react";
 import App from "next/app";
 import AOS from "aos";
-import Swiper from 'swiper/bundle';
+import Swiper from "swiper/bundle";
 import Head from "next/head";
 import Contexts from "contexts";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,7 +9,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "aos/dist/aos.css";
 import "glightbox/dist/css/glightbox.min.css";
 import "glightbox/dist/css/glightbox.min.css";
-import 'swiper/css/bundle';
+import "swiper/css/bundle";
 import "../styles/base.scss";
 
 class Application extends App {
