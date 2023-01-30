@@ -8,20 +8,20 @@ const HeaderComponent = props => {
     const dropdownElement = useRef();
 
     const mobileNavToogle = () => {
-        document.querySelector('body').classList.toggle('mobile-nav-active');
-        hamburgerElement.current.classList.toggle('d-none');
-        closerElement.current.classList.toggle('d-none');
+        document.querySelector("body").classList.toggle("mobile-nav-active");
+        hamburgerElement.current.classList.toggle("d-none");
+        closerElement.current.classList.toggle("d-none");
     }
 
     const dropdownNavToogle = (e) => {
-        if (document.querySelector('.mobile-nav-active')) {
+        if (document.querySelector(".mobile-nav-active")) {
             e.preventDefault();
-            dropdownElement.current.classList.toggle('active');
-            dropdownElement.current.nextElementSibling.classList.toggle('dropdown-active');
+            dropdownElement.current.classList.toggle("active");
+            dropdownElement.current.nextElementSibling.classList.toggle("dropdown-active");
     
-            let dropDownIndicator = dropdownElement.current.querySelector('.dropdown-indicator');
-            dropDownIndicator.classList.toggle('bi-chevron-up');
-            dropDownIndicator.classList.toggle('bi-chevron-down');
+            let dropDownIndicator = dropdownElement.current.querySelector(".dropdown-indicator");
+            dropDownIndicator.classList.toggle("bi-chevron-up");
+            dropDownIndicator.classList.toggle("bi-chevron-down");
           }
     }
 

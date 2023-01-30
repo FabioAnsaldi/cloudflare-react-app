@@ -6,7 +6,7 @@ const PreloaderComponent = props => {
     const preloaderElement = useRef();
 
     useEffect(() => {
-        preloaderElement.current.classList.add('loaded');
+        preloaderElement.current.classList.add("loaded");
         setTimeout(() => {
             preloaderElement.current.remove();
         }, 2000);
