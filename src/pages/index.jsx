@@ -1,15 +1,36 @@
-import React, { useContext } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import ApplicationComponent from "components";
-import StyleContext from "contexts/styleContext";
+import GalleryComponent from "components/gallery";
 
-// eslint-disable-next-line no-unused-vars
 const Index = props => {
-    
-    const { style } = useContext(StyleContext);
+    const { children } = props;
+
+    const images = [{
+        src: "gallery-1.jpg",
+        title: "gallery image 1",
+        width: 1920,
+        height: 1440
+    }, {
+        src: "gallery-2.jpg",
+        title: "gallery image 2",
+        width: 1920,
+        height: 1440
+    }, {
+        src: "gallery-3.jpg",
+        title: "gallery image 3",
+        width: 1920,
+        height: 1440
+    }, {
+        src: "gallery-4.jpg",
+        title: "gallery image 4",
+        width: 1920,
+        height: 1440
+    }];
 
     return (
         <ApplicationComponent>
-            <section id="hero" className="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade" data-aos-duration={style.SECTION_FADE_IN} data-aos-delay={style.SECTION_FADE_IN_DELAY}>
+            <section id="hero" className="hero d-flex flex-column justify-content-center align-items-center">
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-6 text-center">
@@ -18,8 +39,15 @@ const Index = props => {
                     </div>
                 </div>
             </section>
+            <GalleryComponent images={images} />
+            {children}
         </ApplicationComponent>
     );
+};
+
+
+Index.propTypes = {
+    children: PropTypes.node
 };
 
 export default Index;
