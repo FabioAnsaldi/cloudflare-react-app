@@ -34,7 +34,7 @@ const Index = props => {
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-6 text-center">
-                            <h2>Welcome to Cloudflare React Application</h2>
+                            <h2>Welcome to <span>Cloudflare React</span> Application</h2>
                         </div>
                     </div>
                 </div>

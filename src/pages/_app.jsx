@@ -90,10 +90,11 @@ App.getInitialProps = async context => {
     const BODY_FADE_IN_DELAY = 0;
     const SECTION_FADE_IN = 1000;
     const SECTION_FADE_IN_DELAY = 1500;
+    const WINDOW_SCROLL_Y = 10;
     // eslint-disable-next-line no-unused-vars, no-undef
     const PLATFORM = process.env.PLATFORM || "LOCAL";
 
-    return { env: { VERSION, PLATFORM }, stl: { BODY_FADE_IN, BODY_FADE_IN_DELAY, SECTION_FADE_IN_DELAY, SECTION_FADE_IN } };
+    return { env: { VERSION, PLATFORM }, stl: { BODY_FADE_IN, BODY_FADE_IN_DELAY, SECTION_FADE_IN_DELAY, SECTION_FADE_IN, WINDOW_SCROLL_Y } };
 };
 
 export default Application;
