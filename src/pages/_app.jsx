@@ -17,7 +17,8 @@ class Application extends App {
         super(props);
 
         this.state = {
-            env: props.env
+            env: props.env,
+            stl: props.stl
         };
     }
 
@@ -40,7 +41,8 @@ class Application extends App {
 
     aosInit () {
         AOS.init({
-            duration: 1000,
+            duration: this.state.stl.BODY_FADE_IN,
+            delay: this.state.stl.BODY_FADE_IN_DELAY,
             easing: "ease-in-out",
             once: true,
             mirror: false
@@ -73,7 +75,7 @@ class Application extends App {
         return (
             <>
                 {this.renderHead()}
-                <Contexts env={this.state.env}>
+                <Contexts env={this.state.env} stl={this.state.stl}>
                     <Component {...pageProps} />
                 </Contexts>
             </>
@@ -84,10 +86,14 @@ class Application extends App {
 // eslint-disable-next-line no-unused-vars
 App.getInitialProps = async context => {
     const VERSION = "1.0";
+    const BODY_FADE_IN = 1000;
+    const BODY_FADE_IN_DELAY = 0;
+    const SECTION_FADE_IN = 1000;
+    const SECTION_FADE_IN_DELAY = 1500;
     // eslint-disable-next-line no-unused-vars, no-undef
     const PLATFORM = process.env.PLATFORM || "LOCAL";
 
-    return { env: { VERSION, PLATFORM } };
+    return { env: { VERSION, PLATFORM }, stl: { BODY_FADE_IN, BODY_FADE_IN_DELAY, SECTION_FADE_IN_DELAY, SECTION_FADE_IN } };
 };
 
 export default Application;

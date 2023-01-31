@@ -1,15 +1,19 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import PropTypes from "prop-types";
+import StyleContext from "contexts/styleContext";
 
 const PreloaderComponent = props => {
     const { children } = props;
     const preloaderElement = useRef();
+    const { style } = useContext(StyleContext);
 
     useEffect(() => {
-        preloaderElement.current.classList.add("loaded");
+        setTimeout(() => {
+            preloaderElement.current.classList.add("loaded");
+        }, style.BODY_FADE_IN);
         setTimeout(() => {
             preloaderElement.current.remove();
-        }, 2000);
+        }, style.SECTION_FADE_IN_DELAY + style.SECTION_FADE_IN);
     }, []);
 
     return (
