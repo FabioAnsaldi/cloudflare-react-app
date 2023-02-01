@@ -11,29 +11,12 @@
 /* Colors */
 :root {
   --color-default: #{$color-white};
-  --color-primary: #{$color-blue};
+  --color-primary: #{$color-opaque-green};
   --color-secondary: #{$color-black};
-  --color-opaque-white: #{$color-opaque-white};
-  --color-light-opaque-white: #{$color-light-opaque-white};
-  --color-light-black: #{$color-light-black};
-  --color-opaque-black: #{$color-opaque-black};
-  --color-light-opaque-black: #{$color-light-opaque-black};
-  --color-opaque-light-black: #{$color-opaque-light-black};
-  --color-light-opaque-light-black: #{$color-light-opaque-light-black};
-  --color-opaque-blue: #{$color-opaque-blue};
-  --color-light-opaque-blue: #{$color-light-opaque-blue};
-  --color-light-blue: #{$color-light-blue};
-  --color-grey: #{$color-grey};
-  --color-green: #{$color-green};
-  --color-light-green: #{$color-light-green};
-  --color-opaque-green: #{$color-opaque-green};
-  --color-light-opaque-green: #{$color-light-opaque-green};
-  --color-red: #{$color-red};
-  --color-opaque-green: #{$color-opaque-red};
-  --color-light-opaque-green: #{$color-light-opaque-red};
-  --color-yellow: #{$color-yellow};
-  --color-opaque-yellow: #{$color-opaque-yellow};
-  --color-light-opaque-yellow: #{$color-light-opaque-yellow};
+
+  @each $key, $value in $colors {
+    --color-#{$key} : #{$value};
+  }
 }
 
 /* Smooth scroll behavior */
@@ -89,7 +72,7 @@ h6 {
   font-size: 14px;
   font-weight: 500;
   padding: 0;
-  line-height: 1px;
+  line-height: 1;
   margin: 0 0 5px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -386,7 +369,7 @@ h6 {
   color: var(--color-opaque-white);
   padding-left: 15px;
   display: inline-block;
-  line-height: 0px;
+  line-height: 0;
   transition: 0.3s;
   font-size: 16px;
 }
@@ -468,7 +451,7 @@ h6 {
     z-index: 99;
     opacity: 0;
     visibility: hidden;
-    background-color: var(--color-opaque-light-black);
+    background-color: var(--color-opaque-black);
     transition: 0.3s;
     border-radius: 4px;
   }
@@ -676,11 +659,8 @@ h6 {
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
-.testimonials {
-  margin-top: 80px;
-}
 
-.testimonials .testimonial-item {
+.swiper-widget .testimonial-item {
   box-sizing: content-box;
   padding: 30px;
   margin: 40px 30px;
@@ -692,76 +672,76 @@ h6 {
   transition: 0.3s;
 }
 
-.testimonials .testimonial-item .stars {
+.swiper-widget .testimonial-item .stars {
   margin-bottom: 15px;
 }
 
-.testimonials .testimonial-item .stars i {
+.swiper-widget .testimonial-item .stars i {
   color: var(--color-yellow);
   margin: 0 1px;
 }
 
-.testimonials .testimonial-item .testimonial-img {
+.swiper-widget .testimonial-item .testimonial-img {
   width: 90px;
   border-radius: 50%;
   border: 5px solid var(--color-light-black);
   margin: 0 auto;
 }
 
-.testimonials .testimonial-item h3 {
+.swiper-widget .testimonial-item h3 {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
   color: var(--color-default);
 }
 
-.testimonials .testimonial-item h4 {
+.swiper-widget .testimonial-item h4 {
   font-size: 14px;
   color: var(--color-opaque-white);
   margin: 0;
 }
 
-.testimonials .testimonial-item p {
+.swiper-widget .testimonial-item p {
   font-style: italic;
   margin: 0 auto 15px auto;
 }
 
-.testimonials .swiper-pagination {
+.swiper-widget .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
-.testimonials .swiper-pagination .swiper-pagination-bullet {
+.swiper-widget .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: var(--color-light-opaque-white);
   opacity: 1;
 }
 
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+.swiper-widget .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--color-opaque-white);
 }
 
-.testimonials .swiper-slide {
+.swiper-widget .swiper-slide {
   opacity: 0.3;
 }
 
 @media (max-width: 1199px) {
-  .testimonials .swiper-slide-active {
+  .swiper-widget .swiper-slide-active {
     opacity: 1;
   }
 
-  .testimonials .swiper-pagination {
+  .swiper-widget .swiper-pagination {
     margin-top: 0;
   }
 
-  .testimonials .testimonial-item {
+  .swiper-widget .testimonial-item {
     margin: 40px 20px;
   }
 }
 
 @media (min-width: 1200px) {
-  .testimonials .swiper-slide-next {
+  .swiper-widget .swiper-slide-next {
     opacity: 1;
     transform: scale(1.12);
   }
@@ -770,21 +750,21 @@ h6 {
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
-.gallery {
+.gallery-widget {
   margin-top: 40px;
 }
 
-.gallery .gallery-item {
+.gallery-widget .gallery-item {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
 }
 
-.gallery .gallery-item img {
+.gallery-widget .gallery-item img {
   transition: 0.3s;
 }
 
-.gallery .gallery-links {
+.gallery-widget .gallery-links {
   position: absolute;
   inset: 0;
   opacity: 0;
@@ -793,8 +773,8 @@ h6 {
   z-index: 3;
 }
 
-.gallery .gallery-links .preview-link,
-.gallery .gallery-links .details-link {
+.gallery-widget .gallery-links .preview-link,
+.gallery-widget .gallery-links .details-link {
   font-size: 20px;
   color: var(--color-opaque-white);
   transition: 0.3s;
@@ -802,26 +782,26 @@ h6 {
   margin: 30px 8px 0 8px;
 }
 
-.gallery .gallery-links .preview-link:hover,
-.gallery .gallery-links .details-link:hover {
+.gallery-widget .gallery-links .preview-link:hover,
+.gallery-widget .gallery-links .details-link:hover {
   color: var(--color-default);
 }
 
-.gallery .gallery-links .details-link {
+.gallery-widget .gallery-links .details-link {
   font-size: 30px;
   line-height: 0;
 }
 
-.gallery .gallery-item:hover .gallery-links {
+.gallery-widget .gallery-item:hover .gallery-links {
   opacity: 1;
 }
 
-.gallery .gallery-item:hover .preview-link,
-.gallery .gallery-item:hover .details-link {
+.gallery-widget .gallery-item:hover .preview-link,
+.gallery-widget .gallery-item:hover .details-link {
   margin-top: 0;
 }
 
-.gallery .gallery-item:hover img {
+.gallery-widget .gallery-item:hover img {
   transform: scale(1.1);
 }
 

@@ -3,13 +3,14 @@ import Image from "next/image";
 import PropTypes from "prop-types";
 
 const GalleryComponent = props => {
-    const { children, images } = props;
+    const { children, header, images } = props;
 
     const imgLoader = ({ src }) => {
         return `assets/images/gallery/${src}`;
     };
 
     const GalleryImage = (attr) => {
+    
         return (
             <Image
                 loader={imgLoader}
@@ -37,8 +38,9 @@ const GalleryComponent = props => {
     };
 
     return (
-        <section id="gallery" className="gallery">
+        <section id="gallery-widget" className="gallery-widget">
             <div className="container-fluid">
+                {typeof header === "function" ? header() : (header)}
                 <div className="row gy-4 justify-content-center">
                     {images.map((obj, i) => (
                         <div key={i} className="col-xl-3 col-lg-4 col-md-6">
@@ -46,14 +48,15 @@ const GalleryComponent = props => {
                         </div>
                     ))}
                 </div>
+                {children}
             </div>
-            {children}
         </section>
     );
 };
 
 GalleryComponent.propTypes = {
     children: PropTypes.node,
+    header: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
     images: PropTypes.array.isRequired
 };
 

@@ -5,13 +5,13 @@
 // Colors
 
 $colorClass: ".color";
-$colorKey: "black", "blue", "white";
+$colorKey: "black", "white", "grey", "green", "red", "yellow", "blue", "light-black", "light-white", "light-grey", "light-green", "light-red", "light-yellow", "light-blue", "opaque-black", "opaque-white", "opaque-grey", "opaque-green", "opaque-red", "opaque-yellow", "opaque-blue", "light-opaque-black", "light-opaque-white", "light-opaque-grey", "light-opaque-green", "light-opaque-red", "light-opaque-yellow", "light-opaque-blue";
 
 #{$colorClass} {
 
 	@each $key in $colorKey {
 		&--#{$key} {
-			color: unquote( map-get($color, $key) + ' !important' );
+			color: unquote( map-get($colors, $key) + ' !important' );
 		}
     }
 }
@@ -22,7 +22,7 @@ $bgColorClass: ".backgroundColor";
 
 	@each $key in $colorKey {
 		&--#{$key} {
-			background-color: unquote( map-get($color, $key) + ' !important' );
+			background-color: unquote( map-get($colors, $key) + ' !important' );
 		}
     }
 }
